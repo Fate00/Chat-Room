@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Chat room</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myapp">
+	<h1>Welcome to chat room</h1>
+
+	<div class="login" style="margin-top:50px;">
+	    
+	    <div class="header">
+	        <div class="switch" id="switch">
+	            <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">Login</a>
+				<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">Register</a>
+	            <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 40px; left: 0px;"></div>
+	        </div>
+	    </div>    
+	  
+	    
+	    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">    
+            <!--登录-->
+            <div class="web_login" id="web_login" ng-controller='loginController'>   
+                <div class="login-box">	            
+					<div class="login_form">
+						<form>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email</label>
+						    <input type="email" class="form-control" id="exampleInputEmail1" ng-model='emailL' placeholder="Email">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Password</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" ng-model='pwL' placeholder="Password">
+						  </div>					  
+						  <button type="submit" class="btn btn-default" ng-click='login()'>Submit</button>
+						</form>
+		            </div>	           
+            	</div>	               
+            </div>
+            <!--登录end-->
+	  </div>
+
+	  <!--注册-->
+	    <div class="qlogin" id="qlogin" style="display: none; ">
+	   
+	    <div class="web_login" ng-controller='registerController'>
+	    	<form class="form-horizontal" style="width:90%;padding-left:40px;padding-top:30px">
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="emailR" ng-model='emailR' placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="nameR" ng-model='nameR' placeholder="Name">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" id="passwordR1" ng-model='pwR1' placeholder="Password">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Retype</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control confirmPW" ng-model='pwR2' placeholder="Password">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default" ng-click='signIn()'>Sign in</button>
+			    </div>
+			  </div>
+			</form>
+	           
+	    
+	    </div>
+	   
+	    
+	    </div>
+	    <!--注册end-->
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src='js/own.js'></script>
+	<script src="js/main-app.js"></script>
+
+
+	
+	<!-- <script src="js/service-factory.js"></script> -->	
+</body>

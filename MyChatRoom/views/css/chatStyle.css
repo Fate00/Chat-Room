@@ -1,0 +1,69 @@
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff url(../img/Sky.jpg) 50% 0 no-repeat;
+}
+
+.chatArea {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  padding-bottom: 70px;
+  top: 70px;
+}
+
+.inputArea {
+  position: relative;
+  top: 70px;
+}
+
+.Message {
+  height: 490px;
+  margin: 0;
+  overflow: scroll;
+}
+
+.onlineList {
+  position: relative;
+  height: 500px;
+  width: 60%;
+  left: 20%;
+  padding: 0;
+  margin: 0;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  top: 70px;
+}
+
+.userList {
+  height: 490px;
+  margin: 0;
+  overflow: scroll;
+}
